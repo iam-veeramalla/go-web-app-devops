@@ -32,7 +32,7 @@ func main() {
 	http.HandleFunc("/about", aboutPage)
 	http.HandleFunc("/contact", contactPage)
 
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe("0.0.0.0:8080", nil)
 	if err != nil {
 		log.Fatal(err)
 	}

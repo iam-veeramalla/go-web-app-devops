@@ -1,26 +1,22 @@
-# Deployment template for the Go Web App
-
+# This is a sample deployment manifest file for a simple web application.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "go-web-app-chart.fullname" . }}
+  name: go-web-app
   labels:
-    app: {{ include "go-web-app-chart.name" . }}
+    app: go-web-app
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 1
   selector:
     matchLabels:
-      app: {{ include "go-web-app-chart.name" . }}
+      app: go-web-app
   template:
     metadata:
       labels:
-        app: {{ include "go-web-app-chart.name" . }}
+        app: go-web-app
     spec:
       containers:
-        - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          ports:
-            - name: http
-              containerPort: {{ .Values.service.port }}
-              protocol: TCP
+      - name: go-web-app
+        image: abhishekf5/go-web-app
+        ports:
+        - containerPort: 8080

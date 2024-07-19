@@ -1,17 +1,15 @@
-# Service template for the application
-
+# Service for the application
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "go-web-app-chart.fullname" . }}
+  name: go-web-app
   labels:
-    app: {{ include "go-web-app-chart.name" . }}
+    app: go-web-app
 spec:
   ports:
-    - name: http
-      port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.port }}
-      protocol: TCP
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
   selector:
-    app: {{ include "go-web-app-chart.name" . }}
-  type: {{ .Values.service.type }}
+    app: go-web-app
+  type: ClusterIP
