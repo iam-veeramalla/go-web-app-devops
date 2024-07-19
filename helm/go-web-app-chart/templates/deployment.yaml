@@ -1,0 +1,26 @@
+# Deployment template for the Go Web App
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "go-web-app-chart.fullname" . }}
+  labels:
+    app: {{ include "go-web-app-chart.name" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "go-web-app-chart.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "go-web-app-chart.name" . }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP

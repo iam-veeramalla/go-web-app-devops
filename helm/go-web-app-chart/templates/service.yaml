@@ -1,0 +1,17 @@
+# Service template for the application
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "go-web-app-chart.fullname" . }}
+  labels:
+    app: {{ include "go-web-app-chart.name" . }}
+spec:
+  ports:
+    - name: http
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
+      protocol: TCP
+  selector:
+    app: {{ include "go-web-app-chart.name" . }}
+  type: {{ .Values.service.type }}
