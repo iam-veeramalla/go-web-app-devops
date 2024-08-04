@@ -1,3 +1,3 @@
 module github.com/iam-veeramalla/go-web-app-devops
 
-go 1.21.10
+go 1.22.5
