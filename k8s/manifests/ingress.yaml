@@ -8,8 +8,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: go-web-app.local
-    http:
+  # - host: go-web-app.local
+  - http:
       paths: 
       - path: /
         pathType: Prefix

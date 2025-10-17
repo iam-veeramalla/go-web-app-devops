@@ -1,5 +1,4 @@
-# Containerize the go application that we have created
-# This is the Dockerfile that we will use to build the image
+# Containerize the go application that we have created This is the Dockerfile that we will use to build the image
 # and run the container
 
 # Start with a base image
@@ -32,7 +31,7 @@ COPY --from=base /app/main .
 COPY --from=base /app/static ./static
 
 # Expose the port on which the application will run
-EXPOSE 8080
+EXPOSE 8040
 
 # Command to run the application
 CMD ["./main"]

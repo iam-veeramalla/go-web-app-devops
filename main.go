@@ -27,12 +27,12 @@ func contactPage(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
-	http.HandleFunc("/home", homePage)
+	http.HandleFunc("/", homePage)
 	http.HandleFunc("/courses", coursePage)
 	http.HandleFunc("/about", aboutPage)
 	http.HandleFunc("/contact", contactPage)
 
-	err := http.ListenAndServe("0.0.0.0:8080", nil)
+	err := http.ListenAndServe("0.0.0.0:8040", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
