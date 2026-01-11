@@ -1,15 +1,17 @@
-# Service for the application
+# NK Celestin Web Application - Kubernetes Service
 apiVersion: v1
 kind: Service
 metadata:
-  name: go-web-app
+  name: nk-celestin-web-app
   labels:
-    app: go-web-app
+    app: nk-celestin-web
+    maintainer: nk-celestin
 spec:
-  ports:
-  - port: 80
-    targetPort: 8080
-    protocol: TCP
-  selector:
-    app: go-web-app
   type: ClusterIP
+  selector:
+    app: nk-celestin-web
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    name: http

@@ -1,68 +1,173 @@
-<Doctype html>
-<html>
-    <head>
-        <title>Contact</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - NK Celestin</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+        }
 
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
+        header {
+            background-color: #2563eb;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-            main {
-                padding: 20px;
-            }
+        nav ul li a:hover {
+            color: #06b6d4;
+        }
 
-            section {
-                margin-bottom: 20px;
-            }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
 
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
-                </ul>
-            </nav>
-        </header>
+        section {
+            margin-bottom: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
 
-        <main>
-            <section>
-                <h1>Contact Us</h1>
-                <p>For any doubts while learning, Join our Members only exclusive slack channel</p>
-                <a href="https://www.youtube.com/abhishekVeeramalla/join">Join Slack</a>
+        h1 {
+            color: #2563eb;
+            border-bottom: 3px solid #7c3aed;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #7c3aed;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .contact-info h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .contact-method {
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+
+        a {
+            color: #06b6d4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info a {
+            color: #fff;
+            background: #06b6d4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .contact-info a:hover {
+            background: #0891b2;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #2563eb;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="courses">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Get In Touch</h1>
+            <p>We're here to help you on your learning journey. Whether you have questions about our courses, need technical support, or want to explore collaboration opportunities, we'd love to hear from you.</p>
+
+            <div class="contact-info">
+                <h2>Connect With Us</h2>
+                <div class="contact-method">
+                    <strong>Professional Inquiries:</strong>
+                    <p>For business partnerships, consulting, or professional services, reach out to us directly.</p>
+                </div>
+                <div class="contact-method">
+                    <strong>Learning Support:</strong>
+                    <p>Have questions about our courses or need help with your learning path? We're here to assist you.</p>
+                </div>
+                <div class="contact-method">
+                    <strong>Community:</strong>
+                    <p>Join our growing community of learners and professionals. Share knowledge, ask questions, and grow together.</p>
+                </div>
+            </div>
+
+            <h2>Stay Updated</h2>
+            <p>Follow us to stay informed about new courses, tutorials, and technology insights.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NK Celestin. All rights reserved.</p>
+    </footer>
+</body>
+</html>

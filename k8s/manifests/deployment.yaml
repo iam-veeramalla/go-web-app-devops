@@ -1,22 +1,42 @@
-# This is a sample deployment manifest file for a simple web application.
+# NK Celestin Web Application - Kubernetes Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: go-web-app
+  name: nk-celestin-web-app
   labels:
-    app: go-web-app
+    app: nk-celestin-web
+    version: v2.0.0
+    maintainer: nk-celestin
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: go-web-app
+      app: nk-celestin-web
   template:
     metadata:
       labels:
-        app: go-web-app
+        app: nk-celestin-web
+        version: v2.0.0
     spec:
       containers:
-      - name: go-web-app
-        image: <docker-user-name>/go-web-app
+      - name: nk-celestin-web
+        image: nkcelestin05/nk-celestin-web-app:latest
         ports:
         - containerPort: 8080
+          name: http
+        env:
+        - name: APP_NAME
+          value: "NK Celestin"
+        - name: PRIMARY_COLOR
+          value: "#2563eb"
+        - name: SECONDARY_COLOR
+          value: "#7c3aed"
+        - name: ACCENT_COLOR
+          value: "#06b6d4"
+        resources:
+          limits:
+            cpu: 200m
+            memory: 256Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
