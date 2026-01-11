@@ -1,92 +1,195 @@
-<DocType html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - NK Celestin</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+        }
 
-<html>
-    <head>
-        <title>Learn DevOps from Basics</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
+        header {
+            background-color: #2563eb;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
+        nav ul li a:hover {
+            color: #06b6d4;
+        }
 
-            main {
-                padding: 20px;
-            }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
 
-            section {
-                margin-bottom: 20px;
-            }
+        section {
+            margin-bottom: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
 
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
+        h1 {
+            color: #2563eb;
+            border-bottom: 3px solid #7c3aed;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #7c3aed;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .course-category {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+            padding: 20px;
+            border-left: 4px solid #2563eb;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .course-category h3 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .course-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .course-list li {
+            padding: 12px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 5px;
+            transition: transform 0.2s ease;
+        }
+
+        .course-list li:hover {
+            transform: translateX(5px);
+        }
+
+        a {
+            color: #06b6d4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #2563eb;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="courses">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intro">
+            <h1 style="color: white; border: none;">Professional Technology Courses</h1>
+            <p>Master modern technologies with our comprehensive, hands-on courses. From fundamentals to advanced concepts, we've got you covered.</p>
+        </div>
+
+        <section>
+            <h2>About Our Courses</h2>
+            <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality. Our courses cover everything from basic principles to advanced implementation strategies.</p>
+
+            <div class="course-category">
+                <h3>🎯 Core Curriculum</h3>
+                <ul class="course-list">
+                    <li><strong>DevOps Fundamentals</strong> - Master the complete DevOps lifecycle from basics to production</li>
+                    <li><strong>Cloud Architecture (AWS)</strong> - Build scalable applications on Amazon Web Services</li>
+                    <li><strong>Cloud Architecture (Azure)</strong> - Comprehensive Microsoft Azure training</li>
+                    <li><strong>Infrastructure as Code</strong> - Terraform and automation best practices</li>
+                    <li><strong>Python for DevOps</strong> - Scripting and automation with Python</li>
                 </ul>
-            </nav>
-        </header>
+            </div>
 
-        <main>
-            <section>
-                <h1>Learn DevOps from Basics</h1>
-                <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops)</p>
-                <p>It aims to shorten the systems development life cycle and provide continuous delivery with high software quality. DevOps is complementary with Agile software development; several DevOps aspects came from Agile methodology</p>    
+            <div class="course-category">
+                <h3>🚀 Advanced Topics</h3>
+                <ul class="course-list">
+                    <li><strong>Networking Fundamentals</strong> - Essential networking concepts for cloud engineers</li>
+                    <li><strong>Configuration Management</strong> - Ansible automation and orchestration</li>
+                    <li><strong>GitOps Practices</strong> - Modern deployment strategies with Git</li>
+                </ul>
+            </div>
 
-                <h2>Main Tutorials</h2>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa">DevOps Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvLNOxX0RfndiYSt1Le9azze">AWS Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIcxgCUyBHVOcWs0Krjx9xR">Azure Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvI0O4PeKVV1-yJoX2AqIWuf">Terraform Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKwTyYNJCUwGPvql0TrsPgv">Python Zero to Hero</a></p>
+            <div class="course-category">
+                <h3>🔧 Troubleshooting & Operations</h3>
+                <ul class="course-list">
+                    <li><strong>Kubernetes Operations</strong> - Debug and optimize your K8s clusters</li>
+                    <li><strong>Production Best Practices</strong> - Monitoring, logging, and incident response</li>
+                </ul>
+            </div>
 
-                <h2>Additional Tutorials</h2>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKv4MFW35XRskZbQbrt6ep-">Networking Fundamentals</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvLxd5nmtmORCmhD5jkrNbuE">Ansible Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKu7OZpgj1-MzJFqZ8RBp6f">GitOps Zero to Hero</a></p>
+            <h2>Learning Path</h2>
+            <p>Our structured learning paths help you progress from beginner to expert. Each course includes practical projects, real-world examples, and hands-on labs to reinforce your learning.</p>
+        </section>
+    </main>
 
-                <h2>Troubleshooting Tutorials</h2>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIrFBI1farpLS_OSUBXJMLX">Troubleshooting Kubernetes</a></p>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; Abhishek.Veeramalla</p>
-        </footer>
-    </body>
+    <footer>
+        <p>&copy; 2026 NK Celestin. All rights reserved.</p>
+    </footer>
+</body>
 </html>

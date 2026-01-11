@@ -1,90 +1,157 @@
-<Docktype html>
-<html>
-    <head>
-        <title>About</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - NK Celestin</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+        }
 
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
+        header {
+            background-color: #2563eb;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-            main {
-                padding: 20px;
-            }
+        nav ul li a:hover {
+            color: #06b6d4;
+        }
 
-            section {
-                margin-bottom: 20px;
-            }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
 
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
-                </ul>
-            </nav>
-        </header>
+        section {
+            margin-bottom: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
 
-        <main>
-            <section>
-                <h1>About the Author</h1>
-                <p>Hi Everyone, My name is Abhishek and welcome to my channel :)</p>
+        h1 {
+            color: #2563eb;
+            border-bottom: 3px solid #7c3aed;
+            padding-bottom: 10px;
+        }
 
-                    <p>    I am an opensource enthusiast and a great believer in sharing knowledge. </p>
-                        <p>  I have my footprints in popular opensource projects like Argo CD, Argo CD Operator, Argo Rollouts Manager, GitOps Operator, F5 Ingress Controller, Nginx Ingress Controller by Nginx and others. </p>
-                    
-                            <p> Apart from working with Red Hat as a GitOps product lead, I also hold below positions in OpenSource communities</p>
-                                <p>  - Maintainer of Argo CD Operator</p>
-                                    <p> - Creator of Argo Rollouts Manager</p>
-                                        <p> - Maintainer of RedHat Developer (GitOps operator)</p>
-                                            <p> - Member of Argo Project</p>
-                                                <p> - Member of Argo SIG Security</p>
-                    
-                                                    <p> If you want to learn complete devops for free with practical projects, checkout the playlist</p>
-                                                        <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa"> Playlists</a></p>
-                    
-                                                            <p> Please subscribe to the channel to keep learning and growing together. Thanks :)</p>
-            </section>
-        </main>
+        h2 {
+            color: #7c3aed;
+        }
 
-        <footer>
-            <p>&copy; Abhishek.Veeramalla</p>
-        </footer>
-    </body>
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #06b6d4;
+            font-weight: bold;
+        }
+
+        a {
+            color: #06b6d4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #2563eb;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="courses">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>About NK Celestin</h1>
+            <p>Welcome! NK Celestin is dedicated to empowering individuals through quality technology education and professional development resources.</p>
+
+            <h2>Our Mission</h2>
+            <p>We believe in making technology education accessible to everyone. Our platform provides comprehensive learning resources, practical tutorials, and hands-on projects that help individuals master modern technologies and advance their careers.</p>
+
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Comprehensive DevOps and Cloud Computing tutorials</li>
+                <li>Hands-on practical projects and real-world examples</li>
+                <li>Expert guidance on modern development practices</li>
+                <li>Free educational resources for continuous learning</li>
+                <li>Professional development courses and certifications</li>
+            </ul>
+
+            <h2>Our Expertise</h2>
+            <p>With years of experience in software development, DevOps, and cloud technologies, we provide cutting-edge educational content that reflects industry best practices and current market demands.</p>
+
+            <h2>Join Our Community</h2>
+            <p>Explore our <a href="courses">courses</a> and start your learning journey today. Whether you're a beginner or an experienced professional, we have resources tailored to your needs.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NK Celestin. All rights reserved.</p>
+    </footer>
+</body>
 </html>
