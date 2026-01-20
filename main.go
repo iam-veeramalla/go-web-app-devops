@@ -11,7 +11,7 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 }
 
 func coursePage(w http.ResponseWriter, r *http.Request) {
-	// Render the course html page krishna kiran
+	// Render the course html page krishna kirans
 	http.ServeFile(w, r, "static/courses.html")
 }
 
