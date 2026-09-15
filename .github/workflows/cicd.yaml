@@ -95,7 +95,6 @@
 #         git push
 
 
-```yaml
 # CI/CD using GitHub Actions
 
 name: CI/CD
@@ -216,4 +215,4 @@ jobs:
           git commit -m "Update image tag to ${{ github.run_id }}" || echo "No changes to commit"
 
           git push
-```
+
