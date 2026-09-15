@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: akhilpagadapoola/go-web-app
+  tag: "34976871049"
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+ingress:
+  enabled: true
+  className: alb
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
+  path: /courses
+  pathType: Prefix
