@@ -1,15 +1,13 @@
-# Service for the application
 apiVersion: v1
 kind: Service
 metadata:
-  name: go-web-app
-  labels:
-    app: go-web-app
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
 spec:
-  ports:
-  - port: 80
-    targetPort: 8080
-    protocol: TCP
+  type: {{ .Values.service.type }}
   selector:
-    app: go-web-app
-  type: ClusterIP
+    app: {{ .Release.Name }}
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}

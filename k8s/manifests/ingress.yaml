@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: go-web-app
+  name: go-web-app-nginx
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -18,4 +18,3 @@ spec:
             name: go-web-app
             port:
               number: 80
-
