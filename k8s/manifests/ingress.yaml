@@ -4,9 +4,9 @@ kind: Ingress
 metadata:
   name: go-web-app
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    traefik.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik 
   rules:
   - host: go-web-app.local
     http:

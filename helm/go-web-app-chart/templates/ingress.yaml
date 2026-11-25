@@ -3,9 +3,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: go-web-app
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+#  annotations:
+#    traefik.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: traefik 
   rules:
   - host: go-web-app.local
     http:
