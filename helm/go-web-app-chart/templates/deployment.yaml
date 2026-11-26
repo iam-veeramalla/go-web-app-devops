@@ -7,6 +7,7 @@ metadata:
     app: go-web-app
 spec:
   replicas: {{ .Values.replicaCount }}
+  revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
   selector:
     matchLabels:
       app: go-web-app
