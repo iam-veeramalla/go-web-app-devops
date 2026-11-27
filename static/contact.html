@@ -1,68 +1,49 @@
-<Doctype html>
-<html>
-    <head>
-        <title>Contact</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
-
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
-
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
-
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
-
-            main {
-                padding: 20px;
-            }
-
-            section {
-                margin-bottom: 20px;
-            }
-
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Rabi Mahato</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <a class="brand" href="/home">Rabi<span>.</span>DevOps</a>
             <nav>
                 <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/courses">Courses</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact" aria-current="page">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <main>
-            <section>
-                <h1>Contact Us</h1>
-                <p>For any doubts while learning, Join our Members only exclusive slack channel</p>
-                <a href="https://www.youtube.com/abhishekVeeramalla/join">Join Slack</a>
+    <main>
+        <div class="wrap">
+            <h1>Contact</h1>
+            <p class="lead">Questions while learning, or feedback on this project? Reach out here.</p>
+
+            <div class="grid">
+                <a class="card" href="https://github.com/rabimahato38">
+                    <h3>GitHub</h3>
+                    <p>github.com/rabimahato38: projects and lab code.</p>
+                </a>
+                <a class="card" href="https://github.com/rabimahato38/go-web-app-devops/issues">
+                    <h3>Open an issue</h3>
+                    <p>Found a bug or have a suggestion for this site? Open an issue on the repo.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <span>&copy; Rabi Mahato</span>
+            <span>Go &middot; Docker &middot; Helm &middot; ArgoCD &middot; Kubernetes</span>
+        </div>
+    </footer>
+</body>
+</html>
