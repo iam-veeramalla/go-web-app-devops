@@ -25,8 +25,20 @@ func contactPage(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "static/contact.html")
 }
 
+func rootPage(w http.ResponseWriter, r *http.Request) {
+	// "/" matches every unknown path: redirect only the root, 404 the rest
+	if r.URL.Path != "/" {
+		http.NotFound(w, r)
+		return
+	}
+	http.Redirect(w, r, "/home", http.StatusFound)
+}
+
 func main() {
 
+	// Shared CSS and images
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	http.HandleFunc("/", rootPage)
 	http.HandleFunc("/home", homePage)
 	http.HandleFunc("/courses", coursePage)
 	http.HandleFunc("/about", aboutPage)

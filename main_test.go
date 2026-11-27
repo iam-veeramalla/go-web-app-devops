@@ -31,3 +31,19 @@ func TestMain(t *testing.T) {
 			contentType, expected)
 	}
 }
+
+func TestRootRedirect(t *testing.T) {
+	cases := map[string]int{"/": http.StatusFound, "/nope": http.StatusNotFound}
+	for path, want := range cases {
+		rr := httptest.NewRecorder()
+		rootPage(rr, httptest.NewRequest("GET", path, nil))
+		if rr.Code != want {
+			t.Errorf("%s: got %d want %d", path, rr.Code, want)
+		}
+	}
+	rr := httptest.NewRecorder()
+	rootPage(rr, httptest.NewRequest("GET", "/", nil))
+	if got := rr.Header().Get("Location"); got != "/home" {
+		t.Errorf("redirect to %q, want /home", got)
+	}
+}
